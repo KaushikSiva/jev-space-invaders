@@ -90,6 +90,27 @@
         "wall_clock_s": 82.0,
         "served_model": "gpt-4.1-mini-2025-04-14",
         "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+      },
+      {
+        "seed": 4,
+        "score": 180.0,
+        "steps": 622,
+        "frames": 2485,
+        "lives_lost": 3,
+        "terminated": true,
+        "truncated": false,
+        "model_calls": 156,
+        "input_tokens": 31824,
+        "output_tokens": 434,
+        "latency_ms_p50": 605.0,
+        "latency_ms_p95": 1032.6,
+        "latency_ms_total": 104542.8,
+        "errors_by_status": {},
+        "retries": 0,
+        "fallback_actions": 0,
+        "wall_clock_s": 104.9,
+        "served_model": "gpt-4.1-mini-2025-04-14",
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
       }
     ]
   }
