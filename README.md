@@ -2,7 +2,7 @@
 
 Pilot-track entry for the UFA JEV Bake-Off. JEV (TypeSafe System One) chooses every move of the
 laser cannon in `ALE/SpaceInvaders-v5` via one typed `choice` question per decision; an OpenAI
-model runs the identical loop, prompt, options and state as the LLM baseline.
+model runs the identical loop through TypeSafe's System One adapter (same typed `choice` question, answered with probabilities and confidence), prompt, options and state as the LLM baseline.
 
 ## Run
 
@@ -10,8 +10,8 @@ model runs the identical loop, prompt, options and state as the LLM baseline.
 python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 export TYPESAFE_API_KEY=...   # JEV
 export OPENAI_API_KEY=...     # baseline
-python harness.py --decider jev    --seeds 1 2 3 4 5
-python harness.py --decider openai --seeds 1 2 3 4 5
+python harness.py --decider adapter --seeds 1 2 3 4 5 --interval 4 --max-steps 2000   # baseline via System One adapter
+python harness.py --decider jev     --seeds 1 2 3 4 5 --interval 4 --max-steps 2000
 ```
 
 - State: the 128-byte RAM decoded (AtariARI addresses) to ship x, invader block x/y, enemy missile y,
@@ -25,3 +25,5 @@ python harness.py --decider openai --seeds 1 2 3 4 5
   retries, fallback actions (hold last action on failure), JEV mean confidence and low-confidence
   rate, and the served model id.
 - `--decider random` is a harness smoke test only; it is labelled `random-policy` / provider `none`.
+
+Earlier baseline runs (`baseline_path: "raw chat completions"`) used a plain one-word prompt; the adapter runs are the apples-to-apples comparison.

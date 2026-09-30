@@ -47,7 +47,8 @@
         "fallback_actions": 0,
         "wall_clock_s": 76.9,
         "served_model": "gpt-4.1-mini-2025-04-14",
-        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps",
+        "baseline_path": "raw chat completions"
       },
       {
         "seed": 2,
@@ -68,7 +69,8 @@
         "fallback_actions": 0,
         "wall_clock_s": 67.7,
         "served_model": "gpt-4.1-mini-2025-04-14",
-        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps",
+        "baseline_path": "raw chat completions"
       },
       {
         "seed": 3,
@@ -89,7 +91,8 @@
         "fallback_actions": 0,
         "wall_clock_s": 82.0,
         "served_model": "gpt-4.1-mini-2025-04-14",
-        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps",
+        "baseline_path": "raw chat completions"
       },
       {
         "seed": 4,
@@ -110,7 +113,8 @@
         "fallback_actions": 0,
         "wall_clock_s": 104.9,
         "served_model": "gpt-4.1-mini-2025-04-14",
-        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps",
+        "baseline_path": "raw chat completions"
       },
       {
         "seed": 5,
@@ -131,7 +135,8 @@
         "fallback_actions": 0,
         "wall_clock_s": 68.6,
         "served_model": "gpt-4.1-mini-2025-04-14",
-        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps"
+        "notes": "OpenAI baseline: same state JSON, instructions and six options as JEV; one decision per 4 steps",
+        "baseline_path": "raw chat completions"
       }
     ]
   }
