@@ -171,6 +171,29 @@
       "mean_confidence": 0.465,
       "low_conf_rate": 0.762,
       "notes": "Fix: seeded 1-30 no-op start so seeds differ (earlier JEV runs 7-11 were identical games)"
+    },
+    {
+      "seed": 2,
+      "score": 285.0,
+      "steps": 698,
+      "frames": 2903,
+      "lives_lost": 3,
+      "terminated": true,
+      "truncated": false,
+      "model_calls": 175,
+      "input_tokens": 88111,
+      "output_tokens": 11900,
+      "latency_ms_p50": 181.3,
+      "latency_ms_p95": 272.9,
+      "latency_ms_total": 34565.8,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "wall_clock_s": 35.0,
+      "served_model": "jev-1.13.0",
+      "mean_confidence": 0.479,
+      "low_conf_rate": 0.777,
+      "notes": "Fix: seeded 1-30 no-op start so seeds differ (earlier JEV runs 7-11 were identical games)"
     }
   ],
   "baseline": {
