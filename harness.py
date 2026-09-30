@@ -129,6 +129,10 @@ def pct(xs, p):
 def play(decider, seed, interval, max_steps):
     env = gym.make("ALE/SpaceInvaders-v5", obs_type="ram")
     obs, info = env.reset(seed=seed)
+    # Seeded no-op start (standard Atari eval): 1-30 NOOPs chosen by the seed, so every seed
+    # is a genuinely different game even for a deterministic decider.
+    for _ in range(random.Random(seed).randint(1, 30)):
+        obs, _, _, _, info = env.step(0)
     decider.reset(); start = time.time()
     score, steps, prev, action, lives0 = 0.0, 0, None, 0, info.get("lives", 3)
     terminated = truncated = False
@@ -183,7 +187,7 @@ def main():
         res = load()
         res["config"] = {"env_id": "ALE/SpaceInvaders-v5", "frameskip": 4, "repeat_action_probability": 0.25, "full_action_space": False,
                          "max_num_frames_per_episode": 108000, "obs_type": "ram", "wrappers": [], "decision_interval_steps": a.interval,
-                         "max_steps": a.max_steps, "state_encoding": "RAM bytes (AtariARI addresses) decoded to ship x, invader block x/y, missile y, lives, invaders left, deltas; JSON",
+                         "max_steps": a.max_steps, "noop_start": "1-30 NOOPs, random.Random(seed)", "state_encoding": "RAM bytes (AtariARI addresses) decoded to ship x, invader block x/y, missile y, lives, invaders left, deltas; JSON",
                          "ale_py_version": version("ale-py"), "gymnasium_version": version("gymnasium")}
         role = "baseline" if a.decider in ("openai", "adapter") else "decider"
         entry = {"role": role, "provider": {"jev": "typesafe", "adapter": "openai", "openai": "openai", "random": "none"}[a.decider], "requested_model": model,
