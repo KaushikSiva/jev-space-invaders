@@ -55,6 +55,29 @@
       "mean_confidence": 0.488,
       "low_conf_rate": 0.758,
       "notes": "JEV jev-latest: one typed choice per 4 steps, same state/options as baseline"
+    },
+    {
+      "seed": 2,
+      "score": 285.0,
+      "steps": 726,
+      "frames": 2903,
+      "lives_lost": 3,
+      "terminated": true,
+      "truncated": false,
+      "model_calls": 182,
+      "input_tokens": 91625,
+      "output_tokens": 12376,
+      "latency_ms_p50": 182.8,
+      "latency_ms_p95": 277.1,
+      "latency_ms_total": 34723.1,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "wall_clock_s": 35.1,
+      "served_model": "jev-1.13.0",
+      "mean_confidence": 0.487,
+      "low_conf_rate": 0.753,
+      "notes": "JEV jev-latest: one typed choice per 4 steps, same state/options as baseline"
     }
   ],
   "baseline": {
